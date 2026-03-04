@@ -12,6 +12,7 @@ function App() {
       <Route index path="/" element={<Home/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/certifications" element={<Certifications/>}/>
+      <Route path="/skills" element={<Certifications/>}/>
     </Routes>
   );
 }
