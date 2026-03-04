@@ -2,10 +2,10 @@ export const projects = [
   {
     title: "Moneta-Flow",
     description: "Plataforma completa para administrar tu dinero de manera efectiva e inteligente.",
-    image: "/images/MonetaFlow.png",
+    image: "/images/monetaflow.png",
     technologies: ["React", "Node.js", "MySQL", "Sequelize"],
     github: "https://github.com/thejuanco/monetaflow",
-    demo: "https://moneta-flow.netlify.app/",
+    demo: "https://monetaflow.vercel.app",
     featured: true,
   },
   {
