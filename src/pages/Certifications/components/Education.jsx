@@ -24,19 +24,33 @@ export default function Education() {
                     <div key={index} className="p-4 border border-gray-200 rounded-xl">
                         <div className="flex items-start gap-4">
                             <div>
-
+                                {/*Image*/}
                             </div>
                         </div>
                         <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between mb-2">
+                                <div className="text-start">
+                                    <h4 className="font-medium text-lg tracking-tighter">{edu.degree}</h4>
+                                    <p className="text-sm text-gray-600">{edu.institution}</p>
+                                    <p className="text-xs text-gray-600">{edu.location}</p>
+                                </div>
+                                <div className="text-xs border border-gray-500 py-0.5 px-1 rounded-full">{edu.status}</div>
+                            </div>
+                            <div className="grid grid-cols-2 mt-4 md:grid-cols-4 gap-4 mb-4 text-sm">
                                 <div>
-                                    <h4 className="font-semibold text-lg">{edu.degree}</h4>
-                                    <p className="text-sm text-muted-foreground">{edu.institution}</p>
-                                    <p className="text-xs text-muted-foreground">{edu.location}</p>
+                                    <h2 className="text-start">Período:</h2>
+                                    <p className="text-start text-gray-600">{edu.startDate} - {edu.endDate}</p>
                                 </div>
                             </div>
+                            <p className="text-sm mb-3 text-start ">{edu.description}</p>
 
-                            <p className="text-sm mb-3">{edu.description}</p>
+                            <div className="flex flex-wrap gap-2">
+                            {edu.skills.map((skill, index) => (
+                                <div key={index} className="text-xs font-semibold border border-gray-300 py-0.5 px-1 rounded-full">
+                                    {skill}
+                                </div>
+                            ))}
+                            </div>
                         </div>
                     </div>
                 ))}

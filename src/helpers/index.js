@@ -96,7 +96,7 @@ export const education = [
     institution: "Universidad Tecnológica de Xicotepec de Júarez",
     location: "Xicotepec de Júarez, México",
     startDate: "2021",
-    endDate: "2015",
+    endDate: "2025",
     status: "Completado",
     thesis: "Sistema de Gestión Inteligente de Recursos en la Nube",
     description: "Programa enfocado en desarrollo de software, algoritmos y arquitectura de sistemas.",
