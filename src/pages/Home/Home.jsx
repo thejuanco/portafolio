@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { useEmployment } from "../../context/EmploymentContext";
 
 import NavBar from "../../components/NavBar";
 import Projects from "./components/Projects";
@@ -7,6 +8,8 @@ import Contact from "./components/Contact";
 import Footer from "../../components/Footer";
 
 const Home = () => {
+  const { employment } = useEmployment()
+
   return (
     <div className="min-h-screen">
       <NavBar />
@@ -33,7 +36,7 @@ const Home = () => {
                   d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
                 />
               </svg>
-              Disponible para proyectos
+              {employment ? <p>Agenda completa por ahora. ¡Sigamos conectados!</p> : <p>Disponible para proyectos</p>}
             </div>
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
