@@ -15,6 +15,10 @@ const Home = () => {
       <NavBar />
       <section className="py-24 md:py-32">
         <div className="flex flex-col items-center text-center space-y-8">
+          <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10">
+            <span class="h-1.5 w-1.5 bg-blue-600 rounded-full me-1"></span>
+            <p>Preview</p>
+          </span>
           <div className="space-y-4">
             <div className="inline-flex items-center rounded-lg bg-slate-100 px-3 py-1 text-sm font-medium">
               <svg
