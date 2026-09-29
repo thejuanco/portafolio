@@ -118,6 +118,18 @@ const Home = () => {
                   />
                 </svg>
               </Link>
+              <Link 
+                to="https://www.linkedin.com/in/juancooo"
+                className="p-2 rounded-lg hover:bg-gray-100"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="/images/linkedin.png"
+                  alt="Descripción de la imagen"
+                  className="w-7 h-7"
+                />
+              </Link>
             </div>
           </div>
         </div>
