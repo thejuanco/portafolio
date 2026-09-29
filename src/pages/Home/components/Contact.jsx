@@ -45,8 +45,9 @@ const Contact = () => {
           </Link>
           <Link
             className="flex items-center gap-2 border border-gray-300 font-medium hover:bg-gray-100 text-slate-900 py-2 px-4 rounded-full"
-            to="https://www.linkedin.com/in/juan-cruz-ortiz-b56607283/"
+            to="https://www.linkedin.com/in/juancooo/"
             target="_blank"
+            rel="noreferrer noopener"
           >
             <img
               src="/images/linkedin.png"
