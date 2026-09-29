@@ -2,18 +2,10 @@ import NavBar from "../../components/NavBar";
 import { useEmployment } from "../../context/EmploymentContext";
 
 const Contact = () => {
-  const {employment, setEmployment} = useEmployment()
-
-    console.log(employment)
+  const { employment } = useEmployment()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
-    try{
-      console.log("Desde el formulario")
-    } catch(ex){
-      console.log(ex)
-    }
   }
 
   return (
@@ -22,7 +14,7 @@ const Contact = () => {
       <div className="py-18 md:py-20">
         <div className="text-center">
           {employment ? (
-            <div>
+            <div className="">
               <div className="inline-flex items-center rounded-lg bg-slate-100 px-3 py-1 text-sm font-medium">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +43,7 @@ const Contact = () => {
               </p>
             </div>
           ) : (
-            <div className="flex">
+            <div className="">
               <div className="inline-flex items-center rounded-lg bg-slate-100 px-3 py-1 text-sm font-medium">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

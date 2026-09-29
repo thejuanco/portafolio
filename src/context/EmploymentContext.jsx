@@ -3,10 +3,10 @@ import { useState, useEffect, useContext, createContext } from "react";
 const EmploymentContext = createContext()
 
 export const EmploymentProvider = ({children}) => {
-    const [employment, setEmployment] = useState(true)
+    const [employment, setEmployment] = useState(false)
 
     return (
-        <EmploymentContext.Provider value={{employment, setEmployment}}>
+        <EmploymentContext.Provider value={{employment}}>
             {children}
         </EmploymentContext.Provider>
     )
