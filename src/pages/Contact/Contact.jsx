@@ -1,5 +1,6 @@
 import NavBar from "../../components/NavBar";
 import { useEmployment } from "../../context/EmploymentContext";
+import ContactInformation from "./components/ContactInformation";
 
 const Contact = () => {
   const { employment } = useEmployment()
@@ -62,9 +63,9 @@ const Contact = () => {
                 ¡Hablemos!
               </div>
               <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl md:text-4xl lg:text-5xl">
-                Envíame un {""}
+                Ponte en {""}
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Correo
+                  Contacto
                 </span>
               </h2>
               <p className="mx-auto max-w-[600px] text-gray-600 mt-1">
@@ -74,47 +75,50 @@ const Contact = () => {
             </div>
           )}
 
-          <div className="flex justify-center items-center">
-            <div className="md:w-1/3 sm:w-1/2 lg:w-1/3 sm:m-10 border border-gray-100 p-6 rounded-xl shadow">
-              <div className="flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"
-                  />
-                </svg>
-                <h2 className="font-medium ml-1 tracking-tighter sm:text-2xl md:text-xl lg:text-3xl">
-                  Envíame un mensaje
-                </h2>
+          <div className="pt-8 m-8 grid grid-cols-2 gap-4">
+            <div>
+              <div className=" border border-gray-200 p-6 rounded-xl">
+                <div className="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"
+                    />
+                  </svg>
+                  <h2 className="font-medium ml-1 tracking-tighter sm:text-2xl md:text-xl lg:text-3xl">
+                    Envíame un mensaje
+                  </h2>
+                </div>
+                {employment ?
+                <p className="flex justify-start text-gray-500">
+                  Completa el formulario para networking o futuras colaboraciones.
+                </p> :
+                <p className="flex justify-start text-gray-500">
+                  Completa y formulario y responderé lo antes posible
+                </p>
+                }
+
+                <form onSubmit={handleSubmit} className="mt-8">
+                  <span className="rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 font-medium">
+                    Disponible proximamente
+                  </span>
+                  <img src="/images/make.svg" className="mt-2" />
+
+                  <button className="bg-gray-500 text-white p-2 w-full font-medium rounded-3xl my-3 hover:cursor-no-drop">
+                    Enviar
+                  </button>
+                </form>
               </div>
-              {employment ?
-              <p className="flex justify-start text-gray-500">
-                Completa el formulario para networking o futuras colaboraciones.
-              </p> :
-              <p className="flex justify-start text-gray-500">
-                Completa y formulario y responderé lo antes posible
-              </p>
-              }
-
-              <form onSubmit={handleSubmit} className="mt-8">
-                <span className="rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 font-medium">
-                  Disponible proximamente
-                </span>
-                <img src="/images/make.svg" className="mt-2" />
-
-                <button className="bg-gray-500 text-white p-2 w-full font-medium rounded-3xl my-3 hover:cursor-no-drop">
-                  Enviar
-                </button>
-              </form>
             </div>
+            <ContactInformation/>
           </div>
         </div>
       </div>
