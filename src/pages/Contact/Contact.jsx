@@ -1,4 +1,5 @@
 import NavBar from "../../components/NavBar";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { useEmployment } from "../../context/EmploymentContext";
 import ContactInformation from "./components/ContactInformation";
 
@@ -85,7 +86,7 @@ const Contact = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="size-6"
+                    className="size-6 mr-1"
                   >
                     <path
                       strokeLinecap="round"
@@ -107,13 +108,43 @@ const Contact = () => {
                 }
 
                 <form onSubmit={handleSubmit} className="mt-8">
-                  <span className="rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 font-medium">
-                    Disponible proximamente
-                  </span>
-                  <img src="/images/make.svg" className="mt-2" />
+                  <div className="grid grid-cols-2 gap-8">
+                    <div className="flex flex-col">
+                      <span className="text-start text-semibold font-medium">Nombre *</span>
+                      <input
+                        className="py-1.5 px-2 border border-gray-200 rounded-lg"
+                        placeholder="Tu nombre completo"
+                      />
+                    </div>
 
-                  <button className="bg-gray-500 text-white p-2 w-full font-medium rounded-3xl my-3 hover:cursor-no-drop">
-                    Enviar
+                    <div className="flex flex-col">
+                      <span className="text-start text-semibold font-medium">Correo Electroníco *</span>
+                      <input
+                        className="py-1.5 px-2 border border-gray-200 rounded-lg"
+                        placeholder="ejemplo@correo.com"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col mt-6">
+                    <span className="text-start text-semibold font-medium">Asunto *</span>
+                    <input
+                      className="py-1.5 px-2 border border-gray-200 rounded-lg"
+                      placeholder="¿En qué puedo ayudarte?"
+                    />
+                  </div>
+
+                  <div className="flex flex-col mt-6">
+                    <span className="text-start text-semibold font-medium">Mensaje *</span>
+                    <textarea
+                      className="py-1.5 px-2 border border-gray-200 rounded-lg h-24"
+                      placeholder="¿En qué puedo ayudarte?"
+                    ></textarea>
+                  </div>
+
+                  <button className="flex justify-center items-center bg-gray-900 text-white p-2 w-full font-medium rounded-lg my-3 hover:cursor-pointer">
+                    <PaperAirplaneIcon className="mr-1 size-5"/>
+                    Enviar Mensaje
                   </button>
                 </form>
               </div>
