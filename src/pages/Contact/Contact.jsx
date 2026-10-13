@@ -1,14 +1,11 @@
 import NavBar from "../../components/NavBar";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { toast, Toaster } from "sonner";
 import { useEmployment } from "../../context/EmploymentContext";
 import ContactInformation from "./components/ContactInformation";
 
 const Contact = () => {
   const { employment } = useEmployment()
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-  }
 
   return (
     <>
@@ -107,7 +104,7 @@ const Contact = () => {
                 </p>
                 }
 
-                <form onSubmit={handleSubmit} className="mt-8">
+                <form className="mt-8">
                   <div className="grid grid-cols-2 gap-8">
                     <div className="flex flex-col">
                       <span className="text-start text-semibold font-medium">Nombre *</span>
@@ -142,7 +139,11 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  <button className="flex justify-center items-center bg-gray-900 text-white p-2 w-full font-medium rounded-lg my-3 hover:cursor-pointer">
+                  <button
+                    onClick={() => toast.error("Ocurrió un error, intentalo más tarde")}
+                    type="button"
+                    className="flex justify-center items-center bg-gray-900 text-white p-2 w-full font-medium rounded-lg my-3 hover:cursor-pointer"
+                  >
                     <PaperAirplaneIcon className="mr-1 size-5"/>
                     Enviar Mensaje
                   </button>
@@ -153,6 +154,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Toaster/>
     </>
   );
 };
