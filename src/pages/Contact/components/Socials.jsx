@@ -12,7 +12,7 @@ export default function Socials() {
 
             <div className="flex gap-8 mt-10">
             <Link
-                to="https://github.com/tu-usuario"
+                to="https://github.com/thejuanco"
                 className="w-16 h-16 border border-gray-200 rounded-xl flex items-center justify-center hover:bg-gray-50"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -34,7 +34,7 @@ export default function Socials() {
             </Link>
 
             <Link
-                to="https://twitter.com/tu-usuario"
+                to="https://twitter.com/thejuancoo"
                 className="w-16 h-16 border border-gray-200 rounded-xl flex items-center justify-center hover:bg-gray-50"
                 target="_blank"
                 rel="noreferrer noopener"
