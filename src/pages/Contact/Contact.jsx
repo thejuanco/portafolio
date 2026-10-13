@@ -3,6 +3,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { toast, Toaster } from "sonner";
 import { useEmployment } from "../../context/EmploymentContext";
 import ContactInformation from "./components/ContactInformation";
+import Socials from "./components/Socials";
 
 const Contact = () => {
   const { employment } = useEmployment()
@@ -140,7 +141,11 @@ const Contact = () => {
                   </div>
 
                   <button
-                    onClick={() => toast.error("Ocurrió un error, intentalo más tarde")}
+                    onClick={() => {
+                      setTimeout(() => {
+                        toast.error("Ocurrió un error, intentalo más tarde")
+                      }, 1000)
+                    }}
                     type="button"
                     className="flex justify-center items-center bg-gray-900 text-white p-2 w-full font-medium rounded-lg my-3 hover:cursor-pointer"
                   >
@@ -150,7 +155,10 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <ContactInformation/>
+            <div className="space-y-4">
+              <ContactInformation/>
+              <Socials/>
+            </div>
           </div>
         </div>
       </div>
